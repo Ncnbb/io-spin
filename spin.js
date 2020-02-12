@@ -1,11 +1,12 @@
 var spinners = require('./spinners')
-
-function Spin(placeholder, type) {
-  if (!(this instanceof Spin)) return new Spin(placeholder, type)
+var colors = require('colors');
+function Spin(placeholder, type, color) {
+  if (!(this instanceof Spin)) return new Spin(placeholder, type, color)
 
   this.pos = 0
   this.placeholder = placeholder || ''
   this.type = type || 'Spin1'
+  this.color = color || 'blue'
 }
 
 Spin.prototype = {
@@ -13,10 +14,7 @@ Spin.prototype = {
   start: function () {
     this.spinner = spinners[this.type]
     this.loop = setInterval(function () {
-      var msg = '\r' + this.spinner[this.pos] + ' ' + this.placeholder
-      var columns = typeof process.stderr.columns === 'number' ? process.stderr.columns : 100
-      msg = msg.slice(0, columns)
-      process.stdout.write(msg)
+      process.stdout.write(colors[this.color](`\r${this.spinner[this.pos]} ${this.placeholder}`))
       this.pos = ++this.pos % this.spinner.length
     }.bind(this), 100)
     return this

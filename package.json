@@ -1,5 +1,5 @@
 {
-  "name": "io-spin",
+  "name": "@Ncnbb/io-spin",
   "version": "0.4.1",
   "description": "TJ Holowaychuk's go-spin node.js port",
   "main": "spin.js",
@@ -15,10 +15,13 @@
     "tj",
     "terminal"
   ],
-  "author": "EGOIST <0x142857@gmail.com",
+  "author": "linhao.4zhong@163.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/egoist/io-spin/issues"
+    "url": "https://github.com/Ncnbb/io-spin/issues"
   },
-  "homepage": "https://github.com/egoist/io-spin"
+  "homepage": "https://github.com/Ncnbb/io-spin",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
 }
