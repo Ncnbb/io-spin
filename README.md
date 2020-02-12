@@ -29,7 +29,7 @@ spinner.update(placeholder)
 
 ## API
 
-### spin(placeholder, type)
+### spin(placeholder, type, color)
 
 #### placeholder
 
