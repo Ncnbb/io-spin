@@ -1,5 +1,5 @@
 {
-  "name": "@Ncnbb/io-spin",
+  "name": "ncnbb-io-spin",
   "version": "0.4.1",
   "description": "TJ Holowaychuk's go-spin node.js port",
   "main": "spin.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/egoist/io-spin.git"
+    "url": "https://github.com/Ncnbb/io-spin.git"
   },
   "keywords": [
     "spin",
