@@ -14,19 +14,19 @@ Spin.prototype = {
   start: function () {
     this.spinner = spinners[this.type]
     this.loop = setInterval(function () {
-      process.stdout.write(colors[this.color](`\r${this.spinner[this.pos]} ${this.placeholder}`))
+      process.stdout.write && process.stdout.write(colors[this.color](`\r${this.spinner[this.pos]} ${this.placeholder}`))
       this.pos = ++this.pos % this.spinner.length
     }.bind(this), 100)
     return this
   },
   stop: function () {
-    process.stdout.clearLine()
-    process.stdout.write('\r')
+    process.stdout.clearLine && process.stdout.clearLine()
+    process.stdout.write && process.stdout.write('\r')
     clearInterval(this.loop)
     return this
   },
   update: function (placeholder) {
-    process.stdout.clearLine()
+    process.stdout.clearLine && process.stdout.clearLine()
     this.placeholder = placeholder + ' '
     return this
   }
